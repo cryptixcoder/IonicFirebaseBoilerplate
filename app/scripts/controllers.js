@@ -25,6 +25,9 @@ angular.module('IonicfireBoilerplate.controllers', [])
 			});
 		};
 	}])
-	.controller('MainCtrl',[function(){
+	.controller('MainCtrl',['$scope','Auth', function($scope, Auth){
+		$scope.logout = function(){
+			Auth.logout();
+		};
 
 	}]);
